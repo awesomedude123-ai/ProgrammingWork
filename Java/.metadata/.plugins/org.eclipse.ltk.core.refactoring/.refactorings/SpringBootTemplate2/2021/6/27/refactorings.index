@@ -1,7 +1,0 @@
-1624916166557	Extract local variable 'count'
-1624918511925	Extract local variable 'count'
-1624919370053	Extract local variable 'sorted'
-1624919481910	Rename local variable 'a'
-1624919504239	Rename local variable 'b'
-1624919793408	Extract local variable 'collect'
-1625005630250	Extract local variable 'ar1'

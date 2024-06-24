@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+/Users/awesomedude123/Desktop/Programming/Java/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-4190954448.index
-2111038406.index
-4273983990.index
-1410454520.index
-2625388093.index
-3947806065.index
