@@ -1,0 +1,44 @@
+package com.sri.javaProject;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class FileWriting1 {
+	
+	public static void main(String[] args) {
+		
+		//BuffereedWriter -> Writes to your files
+		//BufferedReadaer -> Reads to your files
+		
+		///Users/awesomedude123/Desktop/Programming
+		
+		//h/h/h/h
+		
+		//Test each ride!!! With every ride created, there is always test
+		Scanner oldScanner = new Scanner(System.in);
+		
+		try {
+			
+			int x=oldScanner.nextInt();
+		}catch(Exception e) {
+			try {
+				int y=oldScanner.nextInt();
+			}catch (Exception p){
+				System.out.println("You're bad");
+			}
+		}
+		
+		
+		try {
+			BufferedWriter bw = new BufferedWriter(
+					new FileWriter("/Users/awesomedude123/Desktop/Programming/test/sri1.txt")
+					);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}//end main method
+
+}//EndFileWriting1 

@@ -1,0 +1,22 @@
+package Tsa2022;
+import java.util.*;
+
+public class PartC_2152_901 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner oldScanner = new Scanner(System.in);
+		for(int i=0;i<3;i++){
+			String[][] a = new String[4][2];
+			
+			String word = oldScanner.nextLine();
+			for(int x=0;x<word.length();x++) {
+				int y=(int)word.charAt(x);
+				String b = Integer.toBinaryString(y);
+				
+			}
+		}
+		oldScanner.close();
+	}//end main method
+
+}//end public class

@@ -1,0 +1,5 @@
+filename=input("Enter the filename you want to read from: ")
+word=input("Enter the word you want to find: ")
+sentences="".join(open(filename).readlines()).lower()
+print(sentences.count(word))
+open(filename).close()

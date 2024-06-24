@@ -1,0 +1,65 @@
+p{
+    color: white;
+    background: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: aqua;
+}
+
+h1{
+    border: 10px solid black;
+    padding: 10px;
+    margin: 50px 25px 50px 25px;
+    text-align: center;
+}
+
+#para1{
+        font-size: 150%;
+        color: salmon;
+        background: white;
+    
+}
+
+ul{
+    border: 10px dotted red;
+    padding: 50px;
+    margin: 15px;
+}
+
+li{
+    font-size: 50px;
+    word-wrap: normal;
+}
+
+#navbar{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.para2{
+    color: white;
+    text-align: center;
+}
+
+header{
+    border: 5px solid red;
+    padding: 5px;
+    margin: 10px;
+    color: blue;
+}
+
+footer{
+    border: 15px solid green;
+    padding: 10px;
+    margin: 10px;
+    color: blue;
+}
+
+.navbar1{
+    text-align: right;
+    font-size: 30px;
+    
+}
+

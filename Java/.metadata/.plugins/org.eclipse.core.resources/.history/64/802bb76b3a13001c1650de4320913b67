@@ -1,0 +1,42 @@
+package com.sri.course;
+
+public class Interface1 implements Interface{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		remainder(10,20);
+
+	}//end main method
+
+	public static void remainder(int i, int j) {
+		// TODO Auto-generated method stub
+		return i%j;
+		
+	}
+
+	@Override
+	public int add() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int subtract() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int multiplication() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int division() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}//end public class

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="practice.css">
+    <script src="practice.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        This is header
+    </header>
+    <p id="navbar"> This is a navbar. 
+        <section class="navbar1"><pre> Home page       About Me       <button> Contact Us</button></pre></section>
+    </p>
+    <h1> My First Website </h1>
+    <p id="para1"> This is my first ever website. I have never made my own website and this will be my first one. </p>
+
+    <br>
+    <p class="para2"> This is my second line on this website. I hope this is a big success and so far is very fun to do. </p>
+
+    <h2>
+        My favorite games
+    </h2>
+    <ul>
+        <li> Chess: Chess is a game of mind. The way it works and how it works is very interesting. To learn more about chess, just visit <a href="chess.com"> Chess.com </a> </li>
+        <li> Sports: Sports are physical games that keep us active and healthy. As a human, we can not only work for a very long time. We also must be active adn healthy so we are able to workwithout heatlh problems. </li>
+        <li> Phone: My phone is a very powerful machine. It allows me to do many things ranging from texting to finding information in a matter of seconds. </li>
+        <li> Writing: Writing has not been one of my strengths in school. However, I have started to write more often as a passtime. </li>
+    </ul>
+    <p>Want to learn more?</p>
+<button> Click me </button>
+
+    
+<script>
+    $(document).ready(
+        function(){
+            $("button").click(
+                function(){
+                    console.log("This worked");
+                    $("button").hide();
+                }
+            )
+        }
+    )
+</script>
+
+
+    <footer>
+        This is the footer
+    </footer>
+</body>
+</html>
+
+<!--
+     $("button").click(
+            function(){
+                $("button").hide();
+            }
+        )
+-->

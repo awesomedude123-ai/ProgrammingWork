@@ -1,0 +1,23 @@
+package Situations;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Abc {
+	static Scanner oldScanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		number();
+	}//end main method
+	
+	public static void number() {
+		ArrayList<Integer> array = new ArrayList<Integer>();
+		String numbers=oldScanner.nextLine();
+		for(int i=0;i<7;i++) {
+			numbers.split("");
+			System.out.println(numbers);
+		}//end for loop
+	}//end number method
+
+}

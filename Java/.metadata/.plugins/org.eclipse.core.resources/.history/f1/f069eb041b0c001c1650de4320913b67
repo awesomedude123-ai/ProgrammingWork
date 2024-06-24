@@ -1,0 +1,68 @@
+package com.sri.course;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DataStructureStringMethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Data Structures-Array, Lists, ArrayLists
+		//Identify the data type of the collection
+		
+		String[] array = new String[9];
+		String[] array1 = {"hi", "bye"};
+		
+		List<Integer> li = new ArrayList<Integer>();
+		ArrayList<Integer>arLi = new ArrayList<Integer>();
+		
+		int x = array.length;
+		
+		System.out.println(li);
+		li.add(2);
+		System.out.println(li);
+		li.set(0, 1);
+		System.out.println(li);
+		
+		System.out.println(li.get(0));
+		
+		li.size();
+		System.out.println("Size: " + li.size());
+		li.remove(0);
+		System.out.println(li);
+		
+		
+		
+		String name = "Sri Mukkamala";
+		
+		 
+		System.out.println(name.charAt(0));//Character at a specified index
+		name = name.concat("Name"); //Combining string with the parameter
+		System.out.println(name);
+		 
+		System.out.println(name.contains("s"));//Checks to see if string is in the "name" string
+		name.toUpperCase(); //UpperCase all characters
+		System.out.println(name);
+		name.toLowerCase(); //Lower cases all characters
+		System.out.println(name);
+		System.out.println(name.equals("Sri Mukkamala"));//Check if the parameter string is equal to "name string"
+		System.out.println(name.equalsIgnoreCase("sri MuKKamaLAName"));//Check if the parameter string is equal to "name string"; does not take case into account
+		System.out.println(name.indexOf("r"));//Checks and provides the index with which the character provided is at
+		name.substring(3, name.length()-1); //Breaks the string into the specified places.
+		String[] fool = name.split(""); //Splits the string at every character provided
+		for(int i = 0;i<fool.length;i++) {
+			System.out.print(fool[i]);
+		}//end for loop
+		
+		System.out.println();
+		
+		System.out.println(name.length());//Provides the length of string
+		name.replace('k', 'p'); //Replacing the old character with new character
+		System.out.println(name);
+		
+		//String Methods-
+
+	}
+
+}

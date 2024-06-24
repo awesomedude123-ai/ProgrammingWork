@@ -1,0 +1,29 @@
+li{
+    background: red;
+    width: 360px;
+    margin-top: 20px auto;
+}
+
+li:first-child{
+    background-color: white;
+}
+
+p::first-letter{
+    text-transform: capitalize;
+    font-size: 100px;
+}
+
+p:hover{
+    background-color: red;
+    margin: 20px auto;
+    width: 100px;
+}
+
+p{
+    border: 10px dashed black;
+    box-shadow: 0 0 5px rgba(10, 20, 40, 0.5);
+    outline: black;
+
+    text-decoration: underline;
+    visibility: collapse;
+}
