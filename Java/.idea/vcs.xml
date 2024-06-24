@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/SpringBootTemplate2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBootTemplate2/src/main/java/com/sri" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBootTemplate2/src/main/java/com/sri/Graphs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBootTemplate2/src/main/java/com/sri/computerProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBootTemplate2/src/main/java/com/sri/javaProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/hnd-user-registration" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/us-pin-shops" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/us-pinshop-services" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,5 @@
+filename=input("Enter the filename: ")
+letter=input("Enter the letter wanted: ")
+sentences="".join(open(filename).readlines()).lower()
+print(sentences.count(letter.lower()))
+open(filename).close()

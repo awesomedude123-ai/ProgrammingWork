@@ -1,0 +1,42 @@
+package com.sri.course;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Inheritance
+		//Interfaces
+		//Data Structures-> Collections -> Drawers, -> Cupboards -> Cabinets
+		//Array[], ArrayLists(), Lists()
+		
+		String[] name = new String[9];
+		String[] name1 = {"Sri", "Surya", "Varshini", "Anvika"};
+		
+		List<Integer> num = new ArrayList<Integer>();
+		
+		/**
+		 * 1. add
+		 * 2. remove/clear
+		 * 3. size
+		 * 4. 
+		 * 5.
+		 */
+		
+		/**
+		 * String methods->
+		 * String name = "This is the coolest";
+		name.equals("This is cool");
+		name.equalsIgnoreCase("This is cool");
+		name.length();
+		name.concat("This is coolest");
+		name.substring(4);
+		 */
+		
+		
+	}//end main method
+
+}//end inheritance

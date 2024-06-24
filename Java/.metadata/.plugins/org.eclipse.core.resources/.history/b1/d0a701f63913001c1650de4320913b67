@@ -1,0 +1,11 @@
+package com.sri.course;
+
+public interface Interface {
+	
+	public int add();
+	public int subtract();
+	public int multiplication();
+	public int division();
+	
+
+}//end interfaces

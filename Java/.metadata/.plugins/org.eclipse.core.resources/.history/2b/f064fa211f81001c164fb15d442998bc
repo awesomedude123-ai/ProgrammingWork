@@ -1,0 +1,144 @@
+package Tsa2022;
+
+import java.util.*;
+
+public class PartC_2152_901 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner oldScanner = new Scanner(System.in);
+		for (int i = 0; i < 3; i++) {
+
+			// The four different individual regions
+			String[][] a1 = new String[4][2];
+			String[][] a2 = new String[4][2];
+			String[][] a3 = new String[2][4];
+			String[][] a4 = new String[2][4];
+			String word = oldScanner.nextLine();
+			for (int x = 0; x < word.length(); x++) {
+				// Get the character at the specific index and Convert character into hexadecimal
+				int y = (int) word.charAt(x);
+				
+				//Convert hexadecimal to binary string
+				String b = Integer.toBinaryString(y);
+				boolean l = true;
+				String bin = "";
+				/*
+				 * Since each binary number is 8 digits long, we need to fill the remaining indices with 0.
+				 * Since binary conversion can get digits ranging from 6-7 long digits, we put while loop to help fill out the rest of binary number
+				 */
+				while (l == true) {
+
+					//checks to make sure that the length of string is 8.
+					if (8 - b.length() == bin.length()) {
+						l = false;
+					} else {
+						bin = bin + "0";
+					} // end 1 if/else loop
+				} // end while loop
+				bin = bin + b;
+				
+				
+				//for loop and index to create indivudal regions. started with last char in binary digit because we start at top of array which is end of the binary
+				int index = 7;
+				if (x == 0) {
+					
+					//represents y-axis
+					for (int y1 = 0; y1 < 4; y1++) {
+						//represents x-axis
+						for (int x1 = 1; x1 >= 0; x1--) {
+							//checks to see what the character is 
+							if (bin.charAt(index) == '0') {
+								//if 0 it inputs double space into array... else it inputs #-space into array
+								a1[y1][x1] = "  ";
+
+							} else {
+								a1[y1][x1] = "# ";
+							}
+							index--;
+
+						}
+					}
+				} else if (x == 1) {
+					//Same as the x==0 if statement functionality
+					for (int y1 = 0; y1 < 4; y1++) {
+						for (int x1 = 1; x1 >= 0; x1--) {
+							if (bin.charAt(index) == '0') {
+								a2[y1][x1] = "  ";
+
+							} else {
+								a2[y1][x1] = "# ";
+
+							}
+							index--;
+
+						}
+
+					}
+				} else if (x == 2) {
+					//this is code for the 2 by 4 arrays...functions same as x==0 functionality except boundaries are different
+					for (int y1 = 0; y1 <= 1; y1++) {
+						for (int x1 = 0; x1 < 4; x1++) {
+							if (bin.charAt(index) == '0') {
+								a3[y1][x1] = "  ";
+
+							} else {
+								a3[y1][x1] = "# ";
+
+							}//end if else statement
+							index--;
+						}//end for loop
+
+					}//end for loop
+				} else {
+					//same function as x==2 functionality 
+					for (int y1 = 0; y1 <= 1; y1++) {
+						for (int x1 = 0; x1 < 4; x1++) {
+							if (bin.charAt(index) == '0') {
+								a4[y1][x1] = "  ";
+
+							} else {
+								a4[y1][x1] = "# ";
+
+							}//end if/else statement
+							index--;
+						}//end for loop
+
+					}//end for loop
+				}//end if else statement
+
+			}//end for loop
+
+			//To get random x region
+			String[][] str = new String[2][2];
+			for (int h = 0; h < 2; h++) {
+				for (int q = 0; q < 2; q++) {
+					double number = Math.random(); //random number
+					if (number >= 0.5) {
+						str[h][q] = "# ";
+					} else {
+						str[h][q] = "  ";
+					}//end if/else statement
+				}//end for loop
+			}//end for loop
+
+			// This is to print QR code on the output.
+
+			System.out.println("# # # # # # #   #   # ");
+			System.out.println("#           #   : " + str[0][0] + str[0][1]);
+			System.out.println("#   # # #   #   : " + str[1][0] + str[1][1]);
+			System.out.println("#   # # #   #   : " + a2[0][0] + a2[0][1]);
+			System.out.println("#   # # #   #   : " + a2[1][0] + a2[1][1]);
+			System.out.println("#           #   : " + a2[2][0] + a2[2][1]);
+			System.out.println("# # # # # # #   : " + a2[3][0] + a2[3][1]);
+			System.out.println("                : " + a1[0][0] + a1[0][1]);
+			System.out.println("# : : : : : : : : " + a1[1][0] + a1[1][1]);
+			System.out.println("  " + a4[0][0] + a4[0][1] + a4[0][2] + a4[0][3] + a3[0][0] + a3[0][1] + a3[0][2]
+					+ a3[0][3] + a1[2][0] + a1[2][1]);
+			System.out.println("# " + a4[1][0] + a4[1][1] + a4[1][2] + a4[1][3] + a3[1][0] + a3[1][1] + a3[1][2]
+					+ a3[0][3] + a1[3][0] + a1[3][1]);
+		} // for loop for inputs
+		oldScanner.close();
+
+	}// end main method
+}// end public class

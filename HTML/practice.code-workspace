@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Programming",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Programming"
+	}
+}

@@ -1,0 +1,83 @@
+package Tsa2022;
+import java.util.*;
+
+public class PartC_2152_901 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner oldScanner = new Scanner(System.in);
+		for(int i=0;i<3;i++){
+			String[][] a1 = new String[4][2];
+			String[][] a2 = new String[4][2];
+			String[][] a3 = new String[2][4];
+			String[][] a4 = new String[2][4];
+			String word = oldScanner.nextLine();
+			for(int x=0;x<word.length();x++) {
+				int y=(int)word.charAt(x);
+				String b = Integer.toBinaryString(y);
+				boolean l = true;
+				String bin = "";
+				
+				while (l == true) {
+					
+					
+					if (8 - b.length() == bin.length()) {
+						l = false;
+					} else {
+						bin = bin + "0";
+					} // end 1 if/else loop
+				} // end while loop
+				bin = bin + b;
+				int index = 0;
+				if(x==0) {
+					for(int y1=3;y1>=0;y1--) {
+						for(int x1=0;x1<=1;x1++) {
+							if(bin.charAt(index)=='0') {
+								a1[y1][x1]="  ";
+								System.out.print(a1[y1][x1] + "h");
+							}else {
+								a1[y1][x1]="# ";
+								System.out.print(a1[y1][x1]);
+							}
+							index++;
+							System.out.println();
+						}
+					}
+				}else if(x==1) {
+					//a2
+				}else if(x==2) {
+					//a3
+				}else {
+					//a4
+				}
+				/*
+				 * for (int p = bin.length(); p >= 1; p--) {
+					
+					//checks to see if it is outputting second character on line so it can move cursor to next line
+					if (p % 2 == 1) {
+						//If char is 0 then it prints an _ on line... else it prints # and moves cursor to next line
+						if (bin.charAt(p - 1) == '0') {
+							System.out.print("_ \n");
+						} else {
+							System.out.print("# \n");
+						}
+					} else {
+						//If char is 0 then it prints an _ on line... else it prints #. Does not move cursor to next line as this is first character in line
+						if (bin.charAt(p - 1) == '0') {
+							System.out.print("_ ");
+						} else {
+							System.out.print("# ");
+						} // end 3 if/else statement
+
+					} // end 2 if/else statement
+				} // end for loop
+				 */
+				
+				
+				
+			}
+		}
+		oldScanner.close();
+	}//end main method
+
+}//end public class

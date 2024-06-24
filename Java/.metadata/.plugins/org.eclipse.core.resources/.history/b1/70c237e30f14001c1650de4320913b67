@@ -1,0 +1,29 @@
+package com.sri.course;
+
+public class TryCatchFileWrite{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Inheritance->Wii example -> do not use wii vut still play video games inherit->we inherit our parents wealth??
+		//--> Class A inherits Class B ----> Class A has access to properties of Class B --> extends 
+		
+		//Overriding -> Changing functionality of the method -> Change method body
+		//Overwriting -> Changing Parameters
+		
+		//Interfaces ---> implements --> Outlines
+		//Try catch -> try a piece of code and catch the error
+		//Flie Writing
+		
+		Scanner oldScanner = new Scanner(System.ib);
+		
+		try {
+			
+		}catch(Exception e) {
+			
+		}//end try/catch
+		
+		
+	}//end main method
+
+}//end public class

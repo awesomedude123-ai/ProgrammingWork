@@ -1,0 +1,67 @@
+package com.sri.course;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class TryCatchFileWrite{
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		//Inheritance->Wii example -> do not use wii vut still play video games inherit->we inherit our parents wealth??
+		//--> Class A inherits Class B ----> Class A has access to properties of Class B --> extends 
+		
+		//Overriding -> Changing functionality of the method -> Change method body
+		//Overwriting -> Changing Parameters
+		
+		//Interfaces ---> implements --> Outlines
+		//Try catch -> try a piece of code and catch the error
+		//Flie Writing
+		
+		/*
+		 * Scanner oldScanner = new Scanner(System.in);
+		int x =0;
+		try {
+			System.out.println("Type in a number");
+			x = oldScanner.nextInt();
+		}catch(InputMismatchException e) {
+			System.out.println("This is so cool");
+		}catch(Exception e) {
+			System.out.println("Im here");
+			System.out.println(e);
+		}//end try catch catch
+		 */
+		
+		Scanner oldScanner = new Scanner(System.in);
+		int x = oldScanner.nextInt();
+		
+		
+		BufferedWriter bw = new BufferedWriter(new FileWriter("/Users/awesomedude123/Desktop/Programming/test/sri.txt"));
+		bw.write("This is so cool. I am so excited. The Philadelphia Eagles won!!!!");
+		bw.write("\nWe won 32-6 against the Atlanta Falcons");
+		bw.close();
+		
+		BufferedWriter bw1 = new BufferedWriter(new FileWriter("/Users/awesomedude123/Desktop/Programming/test/sri-copy.txt"));
+		
+		try {
+		BufferedReader br = new BufferedReader(new FileReader("/Users/awesomedude123/Desktop/Programming/test/sri.txt"));
+		String s=br.readLine();
+		while(s!=null) {
+			System.out.println(s);
+			bw1.write(s+"\n");
+			s=br.readLine();
+		}
+		bw1.close();
+		br.close();
+		}catch(Exception e) {
+			return;
+		}
+		///Users/awesomedude123/Desktop/test/sri.txt
+	}//end main method
+
+}//end public class
