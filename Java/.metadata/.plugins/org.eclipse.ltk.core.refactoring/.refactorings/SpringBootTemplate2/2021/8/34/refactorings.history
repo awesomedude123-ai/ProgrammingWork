@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Extract local variable &apos;collect&apos; from expression &apos;array.stream().sorted().collect(Collectors.toList())&apos;&#x0A;- Original project: &apos;SpringBootTemplate2&apos;&#x0A;- Variable name: &apos;collect&apos;&#x0A;- Destination method: &apos;com.sri.hackerrank.JavaBigInteger.main(...)&apos;&#x0A;- Variable expression: &apos;array.stream().sorted().collect(Collectors.toList())&apos;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;collect&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.sri.hackerrank{JavaBigInteger.java" name="collect" replace="true" selection="661 53" stamp="1629068041698" varType="false" version="1.0"/>
-</session>
