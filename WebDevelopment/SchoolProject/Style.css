@@ -1,0 +1,44 @@
+.color{
+    display:flex;
+    justify-content:space-between
+}
+
+p{
+    color:aqua; 
+    font-size: 20px;
+}
+
+h1{
+    color:yellow;
+    font-family: 'Times New Roman', Times,sans-serif;
+}
+
+img{
+    
+  background: #aef;
+  /* #eee */
+  margin: auto;
+  padding: 15px 10px;
+}
+
+body{
+    height:100%;
+    background-image: linear-gradient(red,blue,red);
+    background-repeat:repeat;
+    color: white;
+    border:8px rgb(5, 228, 5) solid;
+    padding: 1%;
+    margin-left: 10px;
+    margin-right: 10    px;
+}
+
+ul{
+    border: 3px solid #ccc;
+    padding: 20px;
+}
+
+h3{
+    text-align: center;
+    color:rgb(173, 219, 22);
+    font-size: 30px;
+}

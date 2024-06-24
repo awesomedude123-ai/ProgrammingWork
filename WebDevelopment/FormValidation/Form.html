@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Validation Form </title>
+    <link rel="stylesheet" href="Form.css" type="text/css">
+    <script type="text/javascript" src="Form.js"></script>
+</head>
+
+<body>
+    <div id="labelButtons">
+        <div>
+            <h1> Validation Form </h1>
+            <p> Please enter the values below for the form. If they are valid and you confirm the input, they will be
+                printed below. </p>
+        </div>
+        <div style="width:100%; display: inline-block;">
+            <label for="tbPhone"> Phone </label> <input type="text" id="tbPhone" placeholder="1234567890"required />
+            <br>
+            <label for="tbName"> Name </label> <input type="text" id="tbName" placeholder="John Cena" required />
+            <br>
+            <label for="tbEmail"> Email </label> <input type="text" id="tbEmail" placeholder="jcena@gmail.com" required />
+            <br>
+            <label for="tbAge"> Age&nbsp;&nbsp;&nbsp;</label> <input type="number" id="tbAge" placeholder="12" required />
+            <br>
+            <label for="tbGrade"> Grade </label> <input type="number" id="tbGrade" placeholder="4" required />
+            <br>
+            <button onclick="Submit();"> Submit </button>
+        </div>
+        <div>
+            <h4 style="display: inline-block;">Phone:&nbsp;</h4>
+            <p id="phone" style="display: inline;"></p>
+            <br>
+            <h4 style="display: inline-block;">Name:&nbsp;</h4>
+            <p id="name" style="display: inline;"></p><br>
+            <h4 style="display: inline-block;">Email:&nbsp;</h4>
+            <p id="email" style="display: inline;"></p><br>
+            <h4 style="display: inline-block;">Age:&nbsp;</h4>
+            <p id="age" style="display: inline;"></p><br>
+            <h4 style="display: inline-block;">Grade:&nbsp;</h4>
+            <p id="grade" style="display: inline;"></p>
+        </div>
+        <div>
+            <p> Click the button below to reset the form </p>
+            <button onclick="Reset();"> Reset </button>
+            <br> <br>
+            <img src="JavascriptBadge.svg" alt="Javascript Logo" height=27% width="27%">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+package Tsa2022;
+
+import java.util.*;
+
+public class PartC_2152_901 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner oldScanner = new Scanner(System.in);
+		for (int i = 0; i < 3; i++) {
+
+			// The four different individual regions
+			String[][] a1 = new String[4][2];
+			String[][] a2 = new String[4][2];
+			String[][] a3 = new String[2][4];
+			String[][] a4 = new String[2][4];
+			String word = oldScanner.nextLine();
+			for (int x = 0; x < word.length(); x++) {
+				int y = (int) word.charAt(x);
+				String b = Integer.toBinaryString(y);
+				boolean l = true;
+				String bin = "";
+
+				while (l == true) {
+
+					if (8 - b.length() == bin.length()) {
+						l = false;
+					} else {
+						bin = bin + "0";
+					} // end 1 if/else loop
+				} // end while loop
+				bin = bin + b;
+				int index = 7;
+				if (x == 0) {
+					for (int y1 = 0; y1 < 4; y1++) {
+						for (int x1 = 1; x1 >= 0; x1--) {
+							if (bin.charAt(index) == '0') {
+								a1[y1][x1] = "  ";
+
+							} else {
+								a1[y1][x1] = "# ";
+							}
+							index--;
+
+						}
+					}
+				} else if (x == 1) {
+
+					for (int y1 = 0; y1 < 4; y1++) {
+						for (int x1 = 1; x1 >= 0; x1--) {
+							if (bin.charAt(index) == '0') {
+								a2[y1][x1] = "  ";
+
+							} else {
+								a2[y1][x1] = "# ";
+
+							}
+							index--;
+
+						}
+
+					}
+				} else if (x == 2) {
+					for (int y1 = 0; y1 <= 1; y1++) {
+						for (int x1 = 0; x1 < 4; x1++) {
+							if (bin.charAt(index) == '0') {
+								a3[y1][x1] = "  ";
+
+							} else {
+								a3[y1][x1] = "# ";
+
+							}
+							index--;
+						}
+
+					}
+				} else {
+					for (int y1 = 0; y1 <= 1; y1++) {
+						for (int x1 = 0; x1 < 4; x1++) {
+							if (bin.charAt(index) == '0') {
+								a4[y1][x1] = "  ";
+
+							} else {
+								a4[y1][x1] = "# ";
+
+							}
+							index--;
+						}
+
+					}
+				}
+
+			}
+
+			String[][] str = new String[2][2];
+			for (int h = 0; h < 2; h++) {
+				for (int q = 0; q < 2; q++) {
+					double number = Math.random();
+					if (number >= 0.5) {
+						str[h][q] = "# ";
+					} else {
+						str[h][q] = "  ";
+					}
+				}
+			}
+
+			// This is to print QR code on the output.
+
+			System.out.println("# # # # # # #   #   # ");
+			System.out.println("#           #   : " + str[0][0] + str[0][1]);
+			System.out.println("#   # # #   #   : " + str[1][0] + str[1][1]);
+			System.out.println("#   # # #   #   : " + a2[0][0] + a2[0][1]);
+			System.out.println("#   # # #   #   : " + a2[1][0] + a2[1][1]);
+			System.out.println("#           #   : " + a2[2][0] + a2[2][1]);
+			System.out.println("# # # # # # #   : " + a2[3][0] + a2[3][1]);
+			System.out.println("                : " + a1[0][0] + a1[0][1]);
+			System.out.println("# : : : : : : : : " + a1[1][0] + a1[1][1]);
+			System.out.println("  " + a4[0][0] + a4[0][1] + a4[0][2] + a4[0][3] + a3[0][0] + a3[0][1] + a3[0][2]
+					+ a3[0][3] + a1[2][0] + a1[2][1]);
+			System.out.println("# " + a4[1][0] + a4[1][1] + a4[1][2] + a4[1][3] + a3[1][0] + a3[1][1] + a3[1][2]
+					+ a3[0][3] + a1[3][0] + a1[3][1]);
+		} // for loop for inputs
+		oldScanner.close();
+
+	}// end main method
+}// end public class

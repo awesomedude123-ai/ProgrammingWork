@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;split&apos; from expression &apos;expression.split(&quot; &quot;)&apos;&#x0A;- Original project: &apos;JavaClass&apos;&#x0A;- Variable name: &apos;split&apos;&#x0A;- Destination method: &apos;com.sri.advanced.Calculator.opr(...)&apos;&#x0A;- Variable expression: &apos;expression.split(&quot; &quot;)&apos;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;split&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.sri.advanced{Calculator.java" name="split" replace="true" selection="293 22" stamp="1629211834052" varType="false" version="1.0"/>
+</session>

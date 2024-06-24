@@ -1,0 +1,20 @@
+package com.sri.javaProject;
+
+public class Child extends Parent{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = num();
+		System.out.println("8 and " + x);
+		
+		str(x);
+
+	}//end main method
+	
+	
+	
+	public static void hi() {
+		System.out.println("hi");
+	}//end hi ethod
+
+}//end publc class

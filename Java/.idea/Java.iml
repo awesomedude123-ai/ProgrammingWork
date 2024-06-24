@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Class/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaClass/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Junit Project/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Seller/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SpringBootTemplate2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tsa" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tutorial/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Usaco/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/com.sri.advancedJava/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hnd-user-registration/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mavin-practice/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/us-pin-shops/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

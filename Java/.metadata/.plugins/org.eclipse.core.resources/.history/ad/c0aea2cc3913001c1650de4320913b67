@@ -1,0 +1,5 @@
+package com.sri.course;
+
+public interface Interface {
+
+}

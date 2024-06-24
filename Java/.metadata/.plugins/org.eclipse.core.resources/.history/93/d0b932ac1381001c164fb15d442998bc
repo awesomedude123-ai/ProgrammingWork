@@ -1,0 +1,44 @@
+package Tsa2022;
+
+import java.util.*;
+
+public class PartB_2152_901 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner oldScanner = new Scanner(System.in);
+		String word = oldScanner.nextLine();
+		for(int i=0;i<word.length();i++) {
+			char a = word.charAt(i);
+			int x=(int)a;
+			String b = Integer.toBinaryString(x);
+			boolean y = true;
+			String bin="";
+			while(y==true) {
+				if(8-b.length()==bin.length()) {
+					y=false;
+				}else {
+					bin=bin+"0";
+				}
+			}
+			bin=bin+b;
+			for(int p=1;p<=bin.length();p++) {
+				if(p%2==0) {
+					if(bin.charAt(p-1)=='0') {
+						System.out.print("_ \n");
+					}else {
+						System.out.println("# \n");
+					}
+				}else{
+					if(bin.charAt(p-1)=='0') {
+						System.out.print("_ ");
+					}else {
+						System.out.println("# ");
+					}
+					
+				}
+			}
+		}
+	}
+
+}

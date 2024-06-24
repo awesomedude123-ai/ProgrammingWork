@@ -1,0 +1,46 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%; 
+    background-color: #08fee2;
+    background-repeat: no-repeat;
+}
+
+label {
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+#tbPhone{
+    margin: 10px;
+}
+#tbName{
+    margin: 10px;
+}
+
+#tbEmail{
+    margin:10px;
+}
+
+#tbAge{
+    margin: 10px;
+}
+
+#tbGrade{
+    margin: 10px;
+}
+
+#labelButtons{
+    background-color: white;
+    width: 900px;
+    height: 100%;
+    margin: 10px auto;
+    border: 20px solid rgb(176, 12, 190);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
