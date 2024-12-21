@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+
+# Executable File
+
+echo "hello"
+
+# This is a comment
+echo "there"
+
+echo The \(kernel\) is $(uname -r).
+
+echo 'The kernel is $(uname -r).'
+
+echo "The kernel is $(uname -r)."
