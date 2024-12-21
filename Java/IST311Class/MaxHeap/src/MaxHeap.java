@@ -54,6 +54,7 @@ public class MaxHeap<T extends Comparable<T>> {
         }
     }//end method
 
+
     public T extract() {
         if(this.heapSize>0) {
             T extractVal = this.maxHeap.get(0);
