@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Explorer</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: aqua;
+      }
+
+      #pokemon-container {
+        margin: 20px auto;
+        max-width: 20%;
+        padding: 20px;
+        border-radius: 30px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+
+      #pokemon-type{
+          list-style-type: none;
+      }
+
+      #pokemon-stats{
+          list-style-type: none;
+      }
+
+      select{
+        border-radius: 50px;
+        width: 100px;
+        height: 30px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Pokémon Explorer</h1>
+    <label for="pokemon-select">Choose a Pokémon:</label>
+    <select id="pokemon-select">
+      <option value="">Loading...</option>
+    </select>
+    <p></p>
+    <div id="pokemon-container" style="display: none">
+      <h2 id="pokemon-name"></h2>
+      <img id="pokemon-image" src="" alt="Pokemon" />
+      <p><strong>Type: </strong> <span id="pokemon-types"></span></p>
+      <p><strong>Base Stats:</strong></p>
+      <ul id="pokemon-stats"></ul>
+    </div>
+
+    <script>
+      //Fetch the pokemon names
+      $.ajax({
+        url: "https://pokeapi.co/api/v2/pokemon?limit=15",
+        method: "GET",
+        success: function (response) {
+          $("select#pokemon-select").find("option").remove();
+          response.results.forEach(element => {
+            //add options to select box
+            $("select#pokemon-select").append(`<option value=${element.url} class="selectedID"> ${element.name} </option>`).val(element.url);
+          });
+          //default select first
+          document.getElementById("pokemon-select").selectedIndex = 0;
+        },
+        error: function (error) {
+          console.error("Error: ", error);
+        }
+      });
+
+      $("select#pokemon-select").on("change", function(){
+        let selectedValue = $(this).val();
+        $.ajax({
+          url: selectedValue,
+          method: "GET",
+          success: function (response) {
+            //Show Container
+            document.getElementById("pokemon-container").style.display="flex";
+
+            //Name
+            $("div#pokemon-container").children("h2#pokemon-name").text(response["name"]);
+
+            //Image
+            $("div#pokemon-container").children("img#pokemon-image").attr("src",response["sprites"]["front_default"]);
+
+            //Type
+            $("ul#pokemon-type").children().remove();
+            let paraStr = "";
+            response["types"].forEach(type => {
+              paraStr += type["type"]["name"] + ", ";
+            });
+            paraStr=paraStr.slice(0,-2);
+            $("p").children("span#pokemon-types").text(paraStr);
+
+            //Base Stat
+            $("ul#pokemon-stats").children().remove();
+            response["stats"].forEach(stat =>{
+              $("ul#pokemon-stats").append(`<li style="margin-right:40px"> ${stat["stat"]["name"]}: ${stat["base_stat"]} </li>`)
+            });
+          }
+        })
+      });
+    </script>
+    
+  </body>
+</html>

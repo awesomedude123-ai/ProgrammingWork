@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L02 jQuery Events</title>
+    <!-- Option 1: Use a CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+
+    <!-- Option 2: Include jQuery locally -->
+    <!--<script src="./jquery-3.7.1.min.js"></script>-->
+    <style>
+      #content {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <button id="animate">Animate</button>
+    <div id="content"></div>
+
+    <button id="btn">Button</button>
+    <div id="example">
+      <button id="divBtn">Div Button</button>
+    </div>
+
+    <script>
+      // Event handling
+      // on() - option 1: $(currentElement).on(event, function)
+      // $("button#btn").on("click", function () {
+      //   console.log("Button clicked!");
+      //   console.log($(this));
+      //   console.log($(this).parent());
+      // });
+      //this -- gets current element
+
+      // on() - option 2: $(parentElement).on(event, childSelector, function)
+      $("div#example").on("click", "#divBtn", function () {
+        console.log("Div Button clicked!");
+        console.log($(this));
+        console.log($(this).parent());
+      });
+
+      // one() - inside function executes only once
+      // $("div#example").one("click", "#divBtn", function () {
+      //   console.log("Div Button clicked!");
+      //   console.log($(this));
+      //   console.log($(this).parent());
+      // });
+
+      // Event handling functions
+      // Define handler functions
+      function handlerA() {
+        console.log("handlerA");
+      }
+      function handlerB() {
+        console.log("handlerB");
+      }
+      function handlerC() {
+        console.log("handlerC");
+      }
+
+      // click()
+      $("button#btn").click(handlerA).click(handlerB).click(handlerC);
+
+      // Event delegation
+      $("button#newBtn").click(handlerA);
+      // $("div#example").on("click", "#newBtn", handlerB);
+      $("div#example").append("<button id='newBtn'>New Button</button>");
+      // $("button#newBtn").click(handlerA);
+
+      // show() or slideDown() or fadeIn()
+      $("button#show").click(function () {
+        $("div#content").fadeIn("slow", "linear", function () {
+          console.log("Show animation completed!");
+        });
+      });
+
+      // hide() or slideUp() or fadeOut() - arrow function can also be used
+      $("button#hide").click(function () {
+        $("div#content").fadeOut(1000, "swing", () => {
+          console.log("Hide animation completed!");
+        });
+      });
+
+      // toggle() or slideToggle() or fadeToggle()
+      $("button#toggle").click(function () {
+        $("div#content").fadeToggle("fast", "linear", () => {
+          console.log("Toggle animation completed!");
+        });
+      });
+
+      // animate() - basic
+      $("button#animate").click(function () {
+        $("div#content").animate(
+          { width: "500px", height: "500px" },
+          "slow",
+          "linear"
+        );
+      });
+
+      // animate() - chain
+      $("button#animate").click(function () {
+        $("div#content")
+          .animate({ width: "500px" }, 1000)
+          .animate({ height: "500px" }, 1000);
+      });
+    </script>
+  </body>
+</html>

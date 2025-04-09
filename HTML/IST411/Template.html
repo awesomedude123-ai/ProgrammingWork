@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox Assignment</title>
+    <style>
+      .checkbox-container {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label> <input type="checkbox" id="selectAll" onclick="selectAll()" /> Select All </label>
+    </div>
+    <hr />
+
+    <div class="checkbox-container">
+      <label> <input type="checkbox" class="child-checkbox" onclick="check()" /> Option 1 </label
+      ><br />
+      <label> <input type="checkbox" class="child-checkbox" onclick="check()"/> Option 2 </label
+      ><br />
+      <label> <input type="checkbox" class="child-checkbox" onclick="check()"/> Option 3 </label
+      ><br />
+      <label> <input type="checkbox" class="child-checkbox" onclick="check()"/> Option 4 </label
+      ><br />
+      <label> <input type="checkbox" class="child-checkbox" onclick="check()"/> Option 5 </label
+      ><br />
+    </div>
+
+    <script>
+      const selectAllCheckbox = document.getElementById("selectAll");
+      const childCheckboxes = document.querySelectorAll(".child-checkbox");
+
+      function selectAll(){
+        if(selectAllCheckbox.checked==false){
+          childCheckboxes.forEach(function(item,index,childCheckboxes){
+            item.checked = false;
+          });
+        }else{
+        childCheckboxes.forEach(function(item, index, childCheckboxes){
+          item.checked = true;
+        });
+      }
+      }
+
+      function check(){
+        let count = 0;
+        childCheckboxes.forEach(function(item,index,childCheckboxes){
+          if(item.checked==true){
+            count++;
+          }
+        });
+        if(count==childCheckboxes.length){
+          selectAllCheckbox.indeterminate = false;
+          selectAllCheckbox.checked=true;
+        }else{
+          if(count>0){
+            selectAllCheckbox.indeterminate = true;
+          }else{
+            selectAllCheckbox.indeterminate = false;
+            selectAllCheckbox.checked = false;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title> Basic HTML </title>
+        <script> 
+            alert("Hello");
+            var name = "Sri Mukkamala";
+            var age = 20;
+            var inCollege = true;
+            var hobbies = [name,age,inCollege];
+            console.log(hobbies);
+            console.log(name + " is "+age+" and " + inCollege);
+            console.log(typeof(name));
+            function fn(name){
+                return name + " is cool"; 
+            }
+
+            function addFunc(v1, v2){
+                return v1 + v2;
+            }
+
+            console.log(addFunc(1,2));
+            console.log(1=="1");
+            console.log(1==="1");
+            console.log(true==1);
+            console.log(true===1);
+            console.log(1!=2);
+            console.log(1!==2);
+            console.log(1!=1);
+            console.log(1!==1);
+
+            var addFunc2 = (v1,v2) => {
+                return v1 + v2;
+            }
+
+            var result2 = addFunc2(3,7);
+            console.log(result2);
+
+            var obj = {
+                name: "Sri Mukkamala",
+                age: 20,
+                isStudent: true,
+                hobbies: ["Reading","Coding"],
+                sayHello: function(){
+                    console.log("Hello World");
+                }
+            }
+
+            console.log(obj.name);
+            obj.name = "Sri";
+            console.log(obj.name);
+            console.log(obj["age"]);
+
+            //delete obj.hobbies or delete obj["hobbies"] -- this deletes the element from the object
+
+            var array = [100,200,"Hello World"];//lengths can be changed --> arr.length = 2;
+            console.log(array.length);
+
+            var array1 = [100,200,300,400,500];
+            console.log(array1);
+
+            array1.forEach(function (item,index, array1){
+                console.log(item+" "+index+" "+array1);
+            });
+
+            console.log(array1.map(function(item, index, array1){
+                return item+1;
+            }));
+
+            console.log(array1.filter(function(item,index,array1){
+                return item > 200;
+            }));
+
+            console.log(array1.every(function(item){
+                return item>200;
+            }));
+
+            console.log(array1.some(function(item){
+                return item>200;
+            }));
+            /**
+            array.forEach()
+            array.map()
+            array.filter()
+            array.every()
+            array.some()
+            **/
+
+            /**
+             * let and var 
+             * */
+
+             //ES6-int
+             var v1=10;
+             var v2=30;
+             let v3=10;
+             const v4=10;
+
+             //ES6 - String
+             let str1='sam';
+             let str2="sam";
+
+             let str3 = `Include str1: ${str1}`;
+             console.log(str3);
+
+             //ES6 - Class
+             class Animal{
+                eat(){
+                    console.log("Eating");
+                }
+             }
+
+             class Dog extends Animal{
+                bark(){
+                    console.log("Barking");
+                }
+             }
+
+             const myDog = new Dog();
+             myDog.eat();
+             myDog.bark();
+        </script> 
+    </head>
+
+    <body>
+        <p> HI </p>
+        <!---- Comment ---->
+    </body>
+</html>
