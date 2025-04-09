@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> BASIC</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <h4> 0. Heading 4 in div#content</h4>
+        <h4> 1. Heading 4 in div#content</h4>
+        <h4> 2. Heading 4 in div#content</h4>
+    </div>
+    <div>
+        Hello World!
+        <p> Welcome to IST 411 </p>
+    </div>
+    <ul>
+        <li class="childLi">1</li>
+        <li id="box">2</li>
+        <li class="childLi">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <input type="text" value="Distributed-Object Computing" />
+    <script>
+        console.log($);
+        console.log(jQuery);
+        /**
+         * Select Element by ID
+         * Vanilla JS
+         * console.log(document.getElementById("box"));
+         * console.log(document.querySelector("#box"));
+         * jQuery
+         * console.log($("#box"));
+         *
+         * */
+
+        //SELECT ELEMENT BY Class
+        //vanilla JS
+        document.getElementsByClassName("childLi");
+        //jQuery
+        console.log($(".childLi"));
+
+        //Select Element by Tag
+        //vanilla JS
+        document.getElementsByTagName("li");
+        //jQuery
+        console.log($("li"));
+
+
+        //combined selector ||
+        console.log($("div,#box"));
+
+        //combined selector &&
+        console.log($("li.childLi"));
+
+        //Traversal methods
+        //first()
+        $("li").first().css("color", "red");
+
+        //last()
+        $("li").last().css("color", "blue");
+
+        //eq(index)
+        $("li").eq(3).css("color", "green");
+
+        //find()
+
+        $("div#content").find("h4").eq(2).css("color", "white");
+        $("div#content h4").eq(2).css("color", "blue");
+
+        // DOM Manipulation - content
+        //html() - can parse any HTML tag
+        //vanilla JS
+        //console.log($("div").html());
+        //$("div").html("<h1> New Value </h1>");
+
+        //text()
+        //console.log($("div").text());
+        //$("div").text("<h1> New Value </h1>");
+
+        //val()
+
+        $("input").val("New Value");
+
+        //addClass()
+        $("div#content").addClass("class1 class2");
+
+        //removeClass()
+        $("div#content").removeClass("class1");
+
+        //toggleClass();
+        $("div#content").toggleClass("class3");
+
+        //DOM Manipulation - CSS Style
+        //console.log($("div#content h4").eq(0).css("color"));
+
+        //$("div#content h4").eq(0).css("color", "skyblue");
+
+        //DOM Manipulation - elements
+
+
+
+        //create a new element
+        let newDiv1 = $("<div>This is new div 1</div>");
+        let newDiv2 = $("<div>", {
+            text: "This is new Div 2",
+            id: "newID",
+            class: "newClass"
+        });
+        //append to current element
+        $("div#content").append(newDiv1);
+        $("div#content").append(newDiv2);
+        //remove an element
+
+        $("div#newID").remove();
+
+        
+        $.ajax({
+            url:"https://jsonplaceholder.typicode.com/users",
+            method: "GET",
+            success: function(response) {
+                //response will be automatically parsed into object
+                console.log(response);
+            },
+            error: function(error) {
+                console.error(error);
+            },
+        });
+        
+
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/posts",
+            method:"POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+                title: "New Post",
+                body: "Post body",
+                userId: 1,
+            }),
+            success: function(response){
+                console.log(response);
+            },
+            error: function(error) {
+                console.error(error);
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

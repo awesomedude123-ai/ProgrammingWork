@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <!-- Option 1: Use a CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+
+    <!-- Option 2: Include jQuery locally -->
+    <script src="./jquery-3.7.1.min.js"></script>
+
+    <!-- AXIOS Option 1: Use a CDN -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+
+    <!-- AXIOS Option 2: Include locally -->
+    <script src="./axios.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // JSON
+      // Convert the JSON object to a JSON string
+      let jsonObj = { name: "Joe", age: 19 };
+      console.log(typeof jsonObj);
+      let jsonStr = JSON.stringify(jsonObj);
+      console.log(jsonStr);
+      console.log(typeof jsonStr);
+
+      // Convert the JSON string to a JSON object
+      let jsonStr2 = '{"name": "Sam", "age": 20}';
+      console.log(typeof jsonStr2);
+      let jsonObj2 = JSON.parse(jsonStr2);
+      console.log(jsonObj2);
+      console.log(typeof jsonObj2);
+
+      // jQuery Ajax
+      // GET - retrieve data from the server
+      // $.ajax({
+      //   url: "https://jsonplaceholder.typicode.com/users",
+      //   method: "GET",
+      //   success: function (response) {
+      //     // response from the server will be converted into object automatically
+      //     console.log(typeof response);
+      //     console.log("Get Users:", response);
+      //   },
+      //   error: function (error) {
+      //     console.error("Error:", error);
+      //   },
+      // });
+
+      // POST - create new data on the server
+      // $.ajax({
+      //   url: "https://jsonplaceholder.typicode.com/posts",
+      //   method: "POST",
+      //   contentType: "application/json",
+      //   // must manually stringify the data
+      //   data: JSON.stringify({
+      //     title: "New Post",
+      //     body: "This is a new post created using jQuery AJAX.",
+      //     userId: 1,
+      //   }),
+      //   success: function (response) {
+      //     console.log("Created Post:", response);
+      //   },
+      //   error: function (error) {
+      //     console.error("Error:", error);
+      //   },
+      // });
+
+      // PUT - update existing data on the server
+      // $.ajax({
+      //   url: "https://jsonplaceholder.typicode.com/posts/1",
+      //   method: "PUT",
+      //   contentType: "application/json",
+      //   data: JSON.stringify({
+      //     title: "Updated Post",
+      //     body: "This post has been updated.",
+      //     userId: 1,
+      //   }),
+      //   success: function (response) {
+      //     console.log("Updated Post:", response);
+      //   },
+      //   error: function (error) {
+      //     console.error("Error:", error);
+      //   },
+      // });
+
+      // DELETE - delete data from the server
+      // $.ajax({
+      //   url: "https://jsonplaceholder.typicode.com/posts/1",
+      //   method: "DELETE",
+      //   success: function (response) {
+      //     console.log("Post Deleted:", response);
+      //   },
+      //   error: function (error) {
+      //     console.error("Error:", error);
+      //   },
+      // });
+
+      // AXIOS
+      // GET
+      // axios
+      //   .get("https://jsonplaceholder.typicode.com/users")
+      //   .then((response) => {
+      //     console.log("Users:", response.data);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error:", error);
+      //   });
+
+      // POST
+      // axios
+      //   .post("https://jsonplaceholder.typicode.com/posts", {
+      //     title: "New Post",
+      //     body: "This is a new post created using Axios.",
+      //     userId: 1,
+      //   })
+      //   .then((response) => {
+      //     console.log("Created Post:", response.data);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error:", error);
+      //   });
+
+      // PUT
+      // axios
+      //   .put("https://jsonplaceholder.typicode.com/posts/1", {
+      //     title: "Updated Post",
+      //     body: "This post has been updated.",
+      //     userId: 1,
+      //   })
+      //   .then((response) => {
+      //     console.log("Updated Post:", response.data);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error:", error);
+      //   });
+
+      // DELETE
+      // axios
+      //   .delete("https://jsonplaceholder.typicode.com/posts/1")
+      //   .then((response) => {
+      //     console.log("Post Deleted:", response.data);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error:", error);
+      //   });
+
+      // FETCH API
+      // GET
+      // fetch("https://jsonplaceholder.typicode.com/users")
+      //   .then((response) => response.json())
+      //   .then((data) => console.log(data))
+      //   .catch((error) => console.error("Error:", error));
+
+      // POST
+      // fetch("https://jsonplaceholder.typicode.com/posts", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     title: "New Post",
+      //     body: "This is a new post.",
+      //     userId: 1,
+      //   }),
+      // })
+      //   .then((response) => response.json())
+      //   .then((data) => console.log("Created:", data))
+      //   .catch((error) => console.error("Error:", error));
+
+      // PUT
+      // fetch("https://jsonplaceholder.typicode.com/posts/1", {
+      //   method: "PUT",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     title: "Updated Title",
+      //     body: "Updated content.",
+      //     userId: 1,
+      //   }),
+      // })
+      //   .then((response) => response.json())
+      //   .then((data) => console.log("Updated:", data))
+      //   .catch((error) => console.error("Error:", error));
+
+      // DELETE
+      // fetch("https://jsonplaceholder.typicode.com/posts/1", {
+      //   method: "DELETE",
+      // })
+      //   .then((response) => response.json())
+      //   .then((data) => console.log("Deleted:", data))
+      //   .catch((error) => console.error("Error:", error));
+
+      // async/await
+      // FETCH API - GET
+      // async function getUsersByFetch() {
+      //   try {
+      //     let response = await fetch(
+      //       "https://jsonplaceholder.typicode.com/users"
+      //     );
+      //     let data = await response.json();
+      //     console.log(data);
+      //   } catch (error) {
+      //     console.error("Error:", error);
+      //   }
+      // }
+
+      // getUsersByFetch();
+
+      // AXIOS - GET
+      // async function getUsersByAxios() {
+      //   try {
+      //     let response = await axios.get(
+      //       "https://jsonplaceholder.typicode.com/users"
+      //     );
+      //     console.log(response.data);
+      //   } catch (error) {
+      //     console.error("Error:", error);
+      //   }
+      // }
+
+      // getUsersByAxios();
+    </script>
+  </body>
+</html>
