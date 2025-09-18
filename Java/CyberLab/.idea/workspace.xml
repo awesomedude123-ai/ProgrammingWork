@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39e63835-2e83-41e0-aa2c-5d7b61bfbe4a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Python/lab.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBootTemplate2" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBootTemplate2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hnd-user-registration" beforeDir="false" afterPath="$PROJECT_DIR$/../hnd-user-registration" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../us-pin-shops" beforeDir="false" afterPath="$PROJECT_DIR$/../us-pin-shops" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../us-pinshop-services" beforeDir="false" afterPath="$PROJECT_DIR$/../us-pinshop-services" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebDevelopment/IST256-Group1" beforeDir="false" afterPath="$PROJECT_DIR$/../../WebDevelopment/IST256-Group1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../X-Code/Example" beforeDir="false" afterPath="$PROJECT_DIR$/../../X-Code/Example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../X-Code/Sample" beforeDir="false" afterPath="$PROJECT_DIR$/../../X-Code/Sample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../X-Code/uitest" beforeDir="false" afterPath="$PROJECT_DIR$/../../X-Code/uitest" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="32qlOmy0HqYlOxvoKHIwzp1tTbM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/awesomedude123/Desktop/Programming/Java/CyberLab",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39e63835-2e83-41e0-aa2c-5d7b61bfbe4a" name="Changes" comment="" />
+      <created>1758155954259</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758155954259</updated>
+    </task>
+    <servers />
+  </component>
+</project>
