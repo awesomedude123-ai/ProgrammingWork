@@ -1,0 +1,92 @@
+{
+  "expansions": [
+    {
+      "input_terms": [
+        "name"
+      ],
+      "expanded_terms": [
+        "person",
+        "name"
+      ]
+    },
+    {
+      "input_terms": [
+        "course"
+      ],
+      "expanded_terms": [
+        "class",
+        "IST",
+        "CYBER",
+        "HCDD",
+        "DS",
+        "ETI",
+        "AI"
+      ]
+    },
+    {
+        "input_terms": [
+            "organization"
+        ],
+        "expanded_terms": [
+            "club",
+            "org",
+            "extracirricular"
+        ]
+    },
+    {
+        "input_terms": [
+            "project"
+        ],
+        "expanded_terms": [
+            "work",
+            "research"
+        ]
+    },
+    {
+        "input_terms": [
+            "skill"
+        ],
+        "expanded_terms": [
+            "ability",
+            "expertise"
+        ]
+    },
+    {
+        "input_terms": [
+            "experience"
+        ],
+        "expanded_terms": [
+            "background",
+            "history"
+        ]
+    },
+    {
+        "input_terms": [
+            "program"
+        ],
+        "expanded_terms": [
+            "event",
+            "initiative"
+        ]
+    },
+    {
+        "input_terms": [
+            "award"
+        ],
+        "expanded_terms": [
+            "honor",
+            "recognition"
+        ]
+    },
+    {
+        "input_terms": [
+            "recommendations"
+        ],
+        "expanded_terms": [
+            "plans",
+            "advice",
+            "tasks"
+        ]
+    }
+  ]
+}
